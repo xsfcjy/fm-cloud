@@ -29,7 +29,7 @@ import java.util.List;
 @AutoConfigureBefore({BambooFeighConfiguration.class, BambooZuulConfiguration.class})
 @Import(BambooWebConfiguration.class)
 //@RibbonClients(defaultConfiguration = {BambooExtConfigration.class})
-@RibbonClients(defaultConfiguration = BambooRibbonClientsConfiguration.class)
+//@RibbonClients(defaultConfiguration = BambooRibbonClientsConfiguration.class)
 public class BambooConfiguration {
 
 

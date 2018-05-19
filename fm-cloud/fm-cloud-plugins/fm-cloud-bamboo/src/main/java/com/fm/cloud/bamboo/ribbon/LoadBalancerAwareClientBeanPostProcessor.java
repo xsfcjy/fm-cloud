@@ -4,6 +4,7 @@ import com.fm.cloud.bamboo.ribbon.loadbalancer.BambooLoadBalancerKey;
 import com.netflix.client.AbstractLoadBalancerAwareClient;
 import com.netflix.client.ClientRequest;
 import com.netflix.client.config.IClientConfig;
+
 import org.mockito.cglib.proxy.Callback;
 import org.mockito.cglib.proxy.Enhancer;
 import org.mockito.cglib.proxy.MethodInterceptor;
@@ -11,7 +12,7 @@ import org.mockito.cglib.proxy.MethodProxy;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.cloud.netflix.ribbon.support.ContextAwareRequest;
-import org.springframework.cloud.netflix.zuul.filters.route.RibbonCommandContext;
+import org.springframework.cloud.netflix.ribbon.support.RibbonCommandContext;
 
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;

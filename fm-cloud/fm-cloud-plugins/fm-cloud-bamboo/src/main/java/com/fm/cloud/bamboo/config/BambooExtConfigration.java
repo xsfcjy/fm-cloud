@@ -1,12 +1,5 @@
 package com.fm.cloud.bamboo.config;
 
-import com.fm.aop.spring.StrictMethodMatcher;
-import com.fm.aop.spring.framework.autoproxy.AdvisorAutoProxyCreator;
-import com.fm.cloud.bamboo.ribbon.BambooRequestContext;
-import com.fm.cloud.bamboo.ribbon.loadbalancer.BambooLoadBalancerKey;
-import com.netflix.client.AbstractLoadBalancerAwareClient;
-import com.netflix.client.ClientRequest;
-import com.netflix.client.config.IClientConfig;
 import org.aopalliance.intercept.MethodInterceptor;
 import org.aopalliance.intercept.MethodInvocation;
 import org.apache.commons.lang3.StringUtils;
@@ -14,9 +7,17 @@ import org.springframework.aop.support.ComposablePointcut;
 import org.springframework.aop.support.DefaultPointcutAdvisor;
 import org.springframework.aop.support.RootClassFilter;
 import org.springframework.cloud.netflix.ribbon.support.ContextAwareRequest;
-import org.springframework.cloud.netflix.zuul.filters.route.RibbonCommandContext;
+import org.springframework.cloud.netflix.ribbon.support.RibbonCommandContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+
+import com.fm.aop.spring.StrictMethodMatcher;
+import com.fm.aop.spring.framework.autoproxy.AdvisorAutoProxyCreator;
+import com.fm.cloud.bamboo.ribbon.BambooRequestContext;
+import com.fm.cloud.bamboo.ribbon.loadbalancer.BambooLoadBalancerKey;
+import com.netflix.client.AbstractLoadBalancerAwareClient;
+import com.netflix.client.ClientRequest;
+import com.netflix.client.config.IClientConfig;
 
 /**
  * Created by saleson on 2017/12/21.

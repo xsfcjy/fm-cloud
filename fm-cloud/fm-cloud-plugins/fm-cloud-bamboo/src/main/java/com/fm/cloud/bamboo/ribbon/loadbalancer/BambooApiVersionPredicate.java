@@ -26,6 +26,9 @@ public class BambooApiVersionPredicate extends AbstractServerPredicate {
             Map<String, String> serverMetadata = ((BambooZoneAvoidanceRule) this.rule)
                     .getServerMetadata(loadBalancerKey.getServiceId(), input.getServer());
             String versions = serverMetadata.get("versions");
+            for(String key : serverMetadata.keySet()){
+            	System.out.println(key+"-"+serverMetadata.get(key));
+            }
             return matchVersion(versions, loadBalancerKey.getApiVersion());
         }
         return true;
